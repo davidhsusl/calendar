@@ -53,17 +53,19 @@ class Calendar extends React.Component {
     renderSidebar: PropTypes.func,
     clearIcon: PropTypes.node,
     focusablePanel: PropTypes.bool,
+    showMinguoDate: PropTypes.bool,
   }
 
   static defaultProps = {
     ...calendarMixinDefaultProps,
     ...defaultProp,
     showToday: true,
-    showDateInput: true,
+    showDateInput: false,
     timePicker: null,
     onOk: noop,
     onPanelChange: noop,
     focusablePanel: true,
+    showMinguoDate: false,
   }
 
 

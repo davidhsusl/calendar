@@ -34,6 +34,7 @@ export default class CalendarHeader extends React.Component {
     disabledMonth: PropTypes.func,
     renderFooter: PropTypes.func,
     onMonthSelect: PropTypes.func,
+    showMinguoDate: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -41,6 +42,7 @@ export default class CalendarHeader extends React.Component {
     enablePrev: 1,
     onPanelChange() { },
     onValueChange() { },
+    showMinguoDate: false,
   }
 
   constructor(props) {
@@ -146,6 +148,7 @@ export default class CalendarHeader extends React.Component {
       enablePrev,
       disabledMonth,
       renderFooter,
+      showMinguoDate,
     } = props;
 
     let panel = null;
@@ -161,6 +164,7 @@ export default class CalendarHeader extends React.Component {
           cellRender={props.monthCellRender}
           contentRender={props.monthCellContentRender}
           renderFooter={renderFooter}
+          showMinguoDate={showMinguoDate}
         />
       );
     }

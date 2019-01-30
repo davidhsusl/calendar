@@ -28,6 +28,10 @@ React Calendar
 [lgtm-alerts]: https://img.shields.io/lgtm/alerts/g/react-component/calendar.svg?logo=lgtm&logoWidth=18
 [lgtm-alerts-url]: https://lgtm.com/projects/g/react-component/calendar/alerts
 
+## Introduction
+
+Support the minguo calendar for Taiwan
+
 ## Screenshots
 
 <img src="https://img.alicdn.com/tps/TB1mYC8KVXXXXaHXXXXXXXXXXXX-566-678.png" width="288"/>

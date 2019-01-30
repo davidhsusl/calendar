@@ -22,11 +22,13 @@ class MonthPanel extends React.Component {
     rootPrefixCls: PropTypes.string,
     value: PropTypes.object,
     defaultValue: PropTypes.object,
+    showMinguoDate: PropTypes.bool,
   }
 
   static defaultProps = {
     onChange: noop,
     onSelect: noop,
+    showMinguoDate: false,
   }
 
   constructor(props) {
@@ -77,6 +79,7 @@ class MonthPanel extends React.Component {
     const { locale, cellRender, contentRender, renderFooter } = props;
     const year = value.year();
     const prefixCls = this.prefixCls;
+    const minguoDateShift = props.showMinguoDate ? 1911 : 0;
 
     const footer = renderFooter && renderFooter('month');
 
@@ -97,7 +100,7 @@ class MonthPanel extends React.Component {
               onClick={props.onYearPanelShow}
               title={locale.yearSelect}
             >
-              <span className={`${prefixCls}-year-select-content`}>{year}</span>
+              <span className={`${prefixCls}-year-select-content`}>{year - minguoDateShift}</span>
               <span className={`${prefixCls}-year-select-arrow`}>x</span>
             </a>
 

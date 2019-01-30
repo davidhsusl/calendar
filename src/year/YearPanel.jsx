@@ -56,6 +56,7 @@ export default class YearPanel extends React.Component {
     const props = this.props;
     const value = this.state.value;
     const { locale, renderFooter } = props;
+    const minguoDateShift = props.showMinguoDate ? 1911 : 0;
     const years = this.years();
     const currentYear = value.year();
     const startYear = parseInt(currentYear / 10, 10) * 10;
@@ -89,7 +90,7 @@ export default class YearPanel extends React.Component {
             <a
               className={`${prefixCls}-year`}
             >
-              {yearData.content}
+              {parseInt(yearData.content, 0) - minguoDateShift}
             </a>
           </td>);
       });
@@ -115,7 +116,7 @@ export default class YearPanel extends React.Component {
               title={locale.decadeSelect}
             >
               <span className={`${prefixCls}-decade-select-content`}>
-                {startYear}-{endYear}
+                {startYear - minguoDateShift}-{endYear - minguoDateShift}
               </span>
               <span className={`${prefixCls}-decade-select-arrow`}>x</span>
             </a>
@@ -149,9 +150,11 @@ YearPanel.propTypes = {
   value: PropTypes.object,
   defaultValue: PropTypes.object,
   renderFooter: PropTypes.func,
+  showMinguoDate: PropTypes.bool,
 };
 
 YearPanel.defaultProps = {
   onSelect() {
   },
+  showMinguoDate: false,
 };
