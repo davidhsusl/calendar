@@ -253,6 +253,12 @@ http://react-component.github.io/calendar/examples/index.html
           <td></td>
           <td>specific the clear icon.</td>
         </tr>
+        <tr>
+          <td>showMinguoDate</td>
+          <td>Boolean</td>
+          <td></td>
+          <td>Show the calendar by minguo date</td>
+        </tr>
     </tbody>
 </table>
 
